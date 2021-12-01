@@ -70,7 +70,7 @@ Public Class Form1
             comando_save.ExecuteNonQuery()
 
         Catch ex As Exception
-            MsgBox("PROBLEMA CON DISPARAR DATOS AL RESUMEN:" & ex.Message)
+            'MsgBox("PROBLEMA CON DISPARAR DATOS AL RESUMEN:" & ex.Message)
         End Try
 
 
