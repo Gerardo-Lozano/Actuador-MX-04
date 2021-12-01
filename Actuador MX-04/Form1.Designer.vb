@@ -63,7 +63,7 @@ Partial Class Form1
         'T_Status
         '
         Me.T_Status.Enabled = True
-        Me.T_Status.Interval = 6000
+        Me.T_Status.Interval = 60000
         '
         'Label3
         '
