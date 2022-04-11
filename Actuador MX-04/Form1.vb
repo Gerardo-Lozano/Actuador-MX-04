@@ -87,7 +87,7 @@ Public Class Form1
             hora_lapso = registro.Tables("Tabla3").Rows(0).Item("hour_lapse")
             lote = registro.Tables("Tabla3").Rows(0).Item("batch")
 
-            If hora_lapso > 24 Then
+            If hora_lapso > 23 Then
 
 
                 'Enviar Correo 
