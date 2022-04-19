@@ -71,7 +71,7 @@ Public Class Form1
             Dim cadena_check As String
             Dim listado As String
 
-            cadena_check = "SELECT top 1 batch, analyst, status, approve_date, approve_hour, DATEDIFF(HOUR , CONVERT(DATETIME, approve_date) + CONVERT(DATETIME, approve_hour), GETDATE()) as [hour_lapse] FROM [AlteaDB].[dbo].[batch_route] WHERE status = 0"
+            cadena_check = "SELECT top 1 batch, analyst, status, approve_date, approve_hour, DATEDIFF(HOUR , CONVERT(DATETIME, approve_date) + CONVERT(DATETIME, approve_hour), GETDATE()) as [hour_lapse] FROM [AlteaDB].[dbo].[batch_route] where status = 0 and DATEDIFF(HOUR , CONVERT(DATETIME, approve_date) + CONVERT(DATETIME, approve_hour), GETDATE()) > 23"
 
             Dim comando_check As SqlCommand
             comando_check = New SqlCommand(cadena_check, ConexionSQL.ConexionSQL)
